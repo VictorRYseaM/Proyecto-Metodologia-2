@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CalculaSalud es una aplicación web donde puedes calcular tu IMC (Índice de Masa Corporal)">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>CalculaSalud</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo2.png" alt="logo imc">
+            <h1 class="title">CalculaSalud</h1>
+        </div>
+
+        <input class="toggle-theme" type="checkbox" id="switch" /><label for="switch">Toggle</label>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2 class="card-title">Calculadora de IMC</h2>
+            <p class="info-text">Coloca tus datos en la calculadora y calcula tu IMC:</p>
+
+            <hr>
+
+            <form action="index.html" method="get" class="form show">
+
+                <label>Género</label>
+                <div class="radios-container">
+                    <div class="male-radio-container">
+                        <label for="male">Masculino</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                    </div>
+
+                    <div class="female-radio-container">
+                        <label for="female">Femenino</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </div>
+                </div>
+
+                <label for="age">Edad</label>
+                <input type="number" name="age" id="age" placeholder="Ej: 35" class="input">
+
+                <label for="weight">Peso (kg)</label>
+                <input type="number" name="weight" id="weight" placeholder="Ej: 75" class="input">
+
+                <label for="height">Altura (cm)</label>
+                <input type="number" name="height" id="height" placeholder="Ej: 1,77" class="input">
+
+                <button type="submit" class="submit-button">Calcular</button>
+            </form>
+
+            <div class="result-card hidden">
+                <p class="text">RESULTADO:</p>
+    
+                <div class="result-container">
+                    <p class="result-text">Tu IMC es: <span id="imc-value"></span></p>
+                </div>
+    
+                <button class="return-btn">Calcular Nuevamente</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&#x2716;</button>
+            <img src="./src/images/logo.png" alt="logo de la cláusula modal">
+            <h2>¡Bienvenido a CalculaSalud!</h2>
+            <p>Aquí, puedes calcular tu Índice de Masa Corporal (IMC) y obtener una evaluación de tu condición física.</p>  
+        </div>
+    </div>
+
+    <footer class="footer">
+        <nav>
+            <ul class="menu">
+                <li><a href="#"><i class="fa-brands fa-square-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            </ul>
+        </nav>
+
+        <p>&copy;2023 CalculaSalud - Fransuelton | Todos los derechos reservados</p>
+        <a href="https://www.flaticon.com/free-icons/bmi" title="bmi icons" target="_blank">Íconos de IMC creados por photo3idea_studio - Flaticon</a>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
